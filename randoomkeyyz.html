@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Key Của Bạn</title>
+
+  <script>
+    // --- Danh sách các trang web cần random ---
+const sites = [
+  "https://tumadam.io.vn/getkey.php/TumadamFreeDay_NMAAHADBBSAHP-30102025-972756097373",
+  "https://tumadam.io.vn/getkey.php/TumadamFreeDay_XEDQUYNIRNFFW-30102025-686553780924",
+  "https://tumadam.io.vn/getkey.php/TumadamFreeDay_HNDAHGMWJQXNV-30102025-568026979484",
+  "https://tumadam.io.vn/getkey.php/TumadamFreeDay_CBVZQSTJFYACF-30102025-696657982196",
+  "https://tumadam.io.vn/getkey.php/TumadamFreeDay_QPPYBHLQKMMYL-30102025-242322512221",
+  "https://tumadam.io.vn/getkey.php/TumadamFreeDay_NDTYYUMLYCACS-30102025-246929298568",
+  "https://tumadam.io.vn/getkey.php/TumadamFreeDay_MZPSYJFBKJCNH-30102025-904085294306",
+  "https://tumadam.io.vn/getkey.php/TumadamFreeDay_PEHRTJOSCMLOZ-30102025-334928551022",
+  "https://tumadam.io.vn/getkey.php/TumadamFreeDay_ECDVBQPBFAXEO-30102025-745821914030",
+  "https://tumadam.io.vn/getkey.php/TumadamFreeDay_LDVXBBIKVWFQN-30102025-585048759014",
+  "https://tumadam.io.vn/getkey.php/TumadamFreeDay_YCVLYIQQOBEWD-30102025-180112889506",
+  "https://tumadam.io.vn/getkey.php/TumadamFreeDay_FCXTKWATIZZBJ-30102025-378821605606",
+  "https://tumadam.io.vn/getkey.php/TumadamFreeDay_NLVRXTHAOIFJM-30102025-417935798030",
+  "https://tumadam.io.vn/getkey.php/TumadamFreeDay_CLNXMCLFNIDCN-30102025-656420332345",
+  "https://tumadam.io.vn/getkey.php/TumadamFreeDay_NNXENRKLZXPEL-30102025-834474200450",
+  "https://tumadam.io.vn/getkey.php/TumadamFreeDay_JJYRKQGBNFTBJ-30102025-753994269297",
+  "https://tumadam.io.vn/getkey.php/TumadamFreeDay_MDNZIGHOPADDK-30102025-044732105464",
+  "https://tumadam.io.vn/getkey.php/TumadamFreeDay_BMEOITZIDVGHZ-30102025-214873573056",
+  "https://tumadam.io.vn/getkey.php/TumadamFreeDay_YURGZWOFHSCBZ-30102025-582185737613",
+  "https://tumadam.io.vn/getkey.php/TumadamFreeDay_OSKPJOMYKGUQH-30102025-683042092880",
+  "https://tumadam.io.vn/getkey.php/TumadamFreeDay_DXAWMOHZZCDAY-30102025-662231542529",
+  "https://tumadam.io.vn/getkey.php/TumadamFreeDay_HEQICRQZHMXBR-30102025-357160222576",
+  "https://tumadam.io.vn/getkey.php/TumadamFreeDay_KRMFUBMSSFXDS-30102025-178538459512",
+  "https://tumadam.io.vn/getkey.php/TumadamFreeDay_XEPDGNVHKZPHR-30102025-550472654885",
+  "https://tumadam.io.vn/getkey.php/TumadamFreeDay_QYBGXSBAQGWPZ-30102025-454278144898",
+  "https://tumadam.io.vn/getkey.php/TumadamFreeDay_UVVTDEREXHATV-30102025-091004592165",
+  "https://tumadam.io.vn/getkey.php/TumadamFreeDay_VNRXDMSGMHWJU-30102025-602880670898",
+  "https://tumadam.io.vn/getkey.php/TumadamFreeDay_HHYYOWDBVJBDV-30102025-239431510259",
+  "https://tumadam.io.vn/getkey.php/TumadamFreeDay_WMSAMHUHRABZY-30102025-883664203581",
+  "https://tumadam.io.vn/getkey.php/TumadamFreeDay_LNQBJWJWMQRRU-30102025-447898437721",
+];
+
+    // Hàm random cực nhanh
+    const idx = crypto.getRandomValues(new Uint32Array(1))[0] % sites.length;
+    location.replace(sites[idx]); // chuyển ngay, không cần chờ load
+  </script>
+</head>
+<body>
+</body>
+</html>

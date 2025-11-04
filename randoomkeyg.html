@@ -3,48 +3,200 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Key Của Bạn</title>
+  <title>Error</title>
 
-  <script>
-    // --- Danh sách các trang web cần random ---
-const sites = [
-  "https://tumadam.io.vn/getkey.php/TumadamFreeDay_COHAVOVSDDKZB-31125-307150115352",
-  "https://tumadam.io.vn/getkey.php/TumadamFreeDay_EUSDANWKKZJSL-31125-296832355531",
-  "https://tumadam.io.vn/getkey.php/TumadamFreeDay_TVKAJIFZWTDVR-31125-252479094266",
-  "https://tumadam.io.vn/getkey.php/TumadamFreeDay_UUGYWRIAMHBWT-31125-202320836557",
-  "https://tumadam.io.vn/getkey.php/TumadamFreeDay_CKMRSRCJRDNOL-31125-765075206198",
-  "https://tumadam.io.vn/getkey.php/TumadamFreeDay_QDBEIALVBPCXZ-31125-881053489405",
-  "https://tumadam.io.vn/getkey.php/TumadamFreeDay_LFAMPGVCZLKHR-31125-334693542167",
-  "https://tumadam.io.vn/getkey.php/TumadamFreeDay_FHJXWRMPDTQQN-31125-124963530701",
-  "https://tumadam.io.vn/getkey.php/TumadamFreeDay_LPOLODFQLTEJW-31125-637069150140",
-  "https://tumadam.io.vn/getkey.php/TumadamFreeDay_NZZXETFBEKTET-31125-572788919577",
-  "https://tumadam.io.vn/getkey.php/TumadamFreeDay_SCKCCNOPFMDPY-31125-281503643949",
-  "https://tumadam.io.vn/getkey.php/TumadamFreeDay_SRNPFQJQKBSMZ-31125-089049772665",
-  "https://tumadam.io.vn/getkey.php/TumadamFreeDay_VAEOTFDBZBEGZ-31125-781719516347",
-  "https://tumadam.io.vn/getkey.php/TumadamFreeDay_CTRGUFCYXZMJI-31125-122637694773",
-  "https://tumadam.io.vn/getkey.php/TumadamFreeDay_HDGDZNTZAJCKX-31125-674236772541",
-  "https://tumadam.io.vn/getkey.php/TumadamFreeDay_PGOZHKHAMOGYM-31125-101031676700",
-  "https://tumadam.io.vn/getkey.php/TumadamFreeDay_LJOFHWBIGJKMN-31125-162932138635",
-  "https://tumadam.io.vn/getkey.php/TumadamFreeDay_JHVZXTSOGCCGD-31125-446734865379",
-  "https://tumadam.io.vn/getkey.php/TumadamFreeDay_ONQRVJZTLONZK-31125-731723379677",
-  "https://tumadam.io.vn/getkey.php/TumadamFreeDay_AECJYHTYCHVQL-31125-001496821938",
-  "https://tumadam.io.vn/getkey.php/TumadamFreeDay_NWEXJZAGMNRYH-31125-617713564846",
-  "https://tumadam.io.vn/getkey.php/TumadamFreeDay_ECHHIRXNIIDBX-31125-560727115629",
-  "https://tumadam.io.vn/getkey.php/TumadamFreeDay_FHZCWIQALSVOD-31125-294089332650",
-  "https://tumadam.io.vn/getkey.php/TumadamFreeDay_GNRIAPELRNJGD-31125-705296342750",
-  "https://tumadam.io.vn/getkey.php/TumadamFreeDay_AZRGETIYLGMMN-31125-545728128999",
-  "https://tumadam.io.vn/getkey.php/TumadamFreeDay_FYWCMVPFFATXG-31125-416674057956",
-  "https://tumadam.io.vn/getkey.php/TumadamFreeDay_GMMWTZIHYCMIW-31125-011849618921",
-  "https://tumadam.io.vn/getkey.php/TumadamFreeDay_VDZHBMAUKXVNB-31125-775536556732",
-  "https://tumadam.io.vn/getkey.php/TumadamFreeDay_DUHQDAJMUYEQT-31125-557343422848",
-  "https://tumadam.io.vn/getkey.php/TumadamFreeDay_VJTXZEGTGJXRE-31125-867666661771",
-];
+  <!-- Auto-redirect (thay URL bên dưới thành link Bản 2.0 của bạn) -->
+  <meta http-equiv="refresh" content="15;url=https://example.com/v2">
 
-    // Hàm random cực nhanh
-    const idx = crypto.getRandomValues(new Uint32Array(1))[0] % sites.length;
-    location.replace(sites[idx]); // chuyển ngay, không cần chờ load
-  </script>
+  <style>
+    /* Reset nhẹ */
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    html,body{height:100%;}
+    body {
+      font-family: Inter, "Helvetica Neue", Arial, sans-serif;
+      background: radial-gradient(1200px 600px at 10% 10%, #f0f9ff 0%, transparent 10%),
+                  radial-gradient(900px 400px at 90% 90%, #fff7ed 0%, transparent 12%),
+                  linear-gradient(180deg, #0f1724 0%, #071023 100%);
+      color: #e6eef8;
+      -webkit-font-smoothing:antialiased;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      padding:24px;
+    }
+
+    .card {
+      width: 100%;
+      max-width: 820px;
+      background: linear-gradient(180deg, rgba(255,255,255,0.03), rgba(255,255,255,0.02));
+      border-radius: 18px;
+      padding: 36px;
+      box-shadow: 0 10px 30px rgba(2,8,23,0.65), inset 0 1px 0 rgba(255,255,255,0.03);
+      backdrop-filter: blur(8px);
+      text-align: center;
+      border: 1px solid rgba(255,255,255,0.04);
+    }
+
+    .logo {
+      width:72px;
+      height:72px;
+      margin: 0 auto 18px;
+      border-radius:16px;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      font-weight:700;
+      font-size:22px;
+      background: linear-gradient(135deg,#6366f1,#06b6d4);
+      color:white;
+      box-shadow: 0 6px 18px rgba(99,102,241,0.18);
+    }
+
+    h1 {
+      font-size:28px;
+      line-height:1.15;
+      margin-bottom:12px;
+      color: #f8fafc;
+      letter-spacing: -0.4px;
+    }
+
+    p.lead {
+      color: rgba(230,238,248,0.9);
+      font-size:16px;
+      margin-bottom:20px;
+    }
+
+    p.notice {
+      background: linear-gradient(90deg, rgba(99,102,241,0.08), rgba(6,182,212,0.04));
+      padding:12px 14px;
+      border-radius:12px;
+      font-weight:600;
+      color:#dfe7ff;
+      display:inline-block;
+      margin-bottom:22px;
+    }
+
+    .countdown {
+      display:block;
+      margin-top:10px;
+      color: rgba(230,238,248,0.75);
+      font-size:14px;
+    }
+
+    .btn-row {
+      margin-top: 22px;
+      display:flex;
+      gap:12px;
+      justify-content:center;
+      flex-wrap:wrap;
+    }
+
+    .btn {
+      appearance:none;
+      border: none;
+      cursor:pointer;
+      font-weight:700;
+      padding:14px 28px;
+      border-radius:12px;
+      font-size:16px;
+      letter-spacing:0.3px;
+      transition: transform .14s ease, box-shadow .14s ease;
+      box-shadow: 0 8px 20px rgba(2,8,23,0.45);
+    }
+
+    .btn-primary {
+      color:#071023;
+      background: linear-gradient(90deg,#a78bfa,#06b6d4);
+    }
+    .btn-primary:hover { transform: translateY(-3px); box-shadow: 0 14px 30px rgba(6,182,212,0.12); }
+    .btn-secondary {
+      color:#e6eef8;
+      background: transparent;
+      border: 1px solid rgba(255,255,255,0.06);
+    }
+    .btn-secondary:hover { transform: translateY(-2px); }
+
+    footer.meta {
+      margin-top:18px;
+      font-size:13px;
+      color: rgba(230,238,248,0.6);
+    }
+
+    @media (max-width:520px){
+      .card { padding:20px; border-radius:14px; }
+      h1 { font-size:20px; }
+      .logo { width:56px; height:56px; font-size:18px; }
+      .btn { padding:12px 20px; font-size:15px; }
+    }
+  </style>
 </head>
 <body>
+  <div class="card" role="main" aria-labelledby="title">
+    <div class="logo" aria-hidden="true">v1</div>
+
+    <h1 id="title">Bản 1.0 Này Đã Hết Sử Dụng Được<br><span style="color:#ffd5a3">Vui Lòng Xóa</span></h1>
+
+    <p class="lead">Và Tải Bản <strong>2.0</strong> Mới Nhất</p>
+
+    <div class="btn-row">
+      <!-- Thay href thành đường dẫn thực tế của bản 2.0 -->
+      <a id="btnGo" class="btn btn-primary" href="https://tumadam.io.vn/lqmmodskinvios1.0/1.0" role="button" aria-label="Chuyển tới bản 2.0">2.0</a>
+
+      <button id="btnCancel" class="btn btn-secondary" type="button">Ở lại trang này</button>
+    </div>
+
+    <span class="countdown" id="countdown">Tự chuyển hướng sau <strong id="sec">7</strong> giây... (nhấn 2.0 để chuyển ngay)</span>
+
+    <footer class="meta" aria-hidden="true">
+      Nếu muốn thay đổi link: chỉnh `href` của nút hoặc giá trị meta refresh trong phần &lt;head&gt;.
+    </footer>
+  </div>
+
+  <script>
+    // Cấu hình: thay URL ở đây nếu cần (dự phòng cho trường hợp meta refresh không hoạt động)
+    const TARGET_URL = "https://tumadam.io.vn/lqmmodskinvios1.0/1.0";
+    // Thời gian đếm ngược (giây) phải khớp với meta refresh phía trên
+    let seconds = 7;
+
+    const secEl = document.getElementById('sec');
+    const countdownEl = document.getElementById('countdown');
+    const btnGo = document.getElementById('btnGo');
+    const btnCancel = document.getElementById('btnCancel');
+
+    // Đồng bộ href
+    btnGo.setAttribute('href', TARGET_URL);
+
+    // Click nút 2.0 sẽ chuyển hướng ngay
+    btnGo.addEventListener('click', function(e){
+      // mặc định <a> sẽ điều hướng, nhưng giữ code để cho trường hợp muốn xử lý JS
+      // window.location.href = TARGET_URL;
+    });
+
+    // Nếu người dùng không muốn chuyển hướng, bấm "Ở lại trang này"
+    btnCancel.addEventListener('click', function(){
+      // Stop auto-redirect: đơn giản là set seconds = Infinity và update thông báo
+      seconds = Infinity;
+      countdownEl.textContent = 'Tự chuyển hướng đã bị hủy. Bạn đang ở lại trang này.';
+    });
+
+    // Đếm ngược hiển thị
+    const timer = setInterval(() => {
+      if (!isFinite(seconds)) { clearInterval(timer); return; }
+      seconds--;
+      if (seconds >= 0) {
+        secEl.textContent = seconds;
+      }
+      if (seconds <= 0) {
+        clearInterval(timer);
+        // Chuyển hướng
+        try {
+          window.location.href = TARGET_URL;
+        } catch (err) {
+          // fallback: thay thông báo nếu không chuyển được
+          countdownEl.textContent = 'Không thể chuyển hướng tự động. Nhấn nút 2.0 để tới bản mới.';
+        }
+      }
+    }, 1000);
+  </script>
 </body>
 </html>

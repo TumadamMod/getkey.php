@@ -2,11 +2,36 @@
 <html lang="vi">
 <head>
   <meta charset="UTF-8">
-    <title>Tải ứng dụng độc quyền App iOS</title>
+  <title>Tải ứng dụng độc quyền App iOS</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="Cài đặt ứng dụng iOS độc quyền chỉ trong vài giây.">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Tải ứng dụng độc quyền App iOS">
+  <meta property="og:description" content="Ứng dụng độc quyền cho thiết bị iOS. Cài đặt trực tiếp nhanh chóng.">
+  <meta property="og:image" content="">
   <meta property="og:url" content="itms-services://?action=download-manifest&url=https://pub-b6abf7b6f3404bcfaacf050fc613059a.r2.dev/5482b02e-8a51-4027-8b4c-0168be8c87da/manifest.plist">
+  <meta property="og:type" content="website">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Tải ứng dụng độc quyền App iOS">
+  <meta name="twitter:description" content="Ứng dụng iOS cài đặt dễ dàng, nhanh chóng và an toàn.">
+  <meta name="twitter:image" content="">
+
+  <!-- JSON-LD Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "MobileApplication",
+    "name": "Luxury iOS App",
+    "operatingSystem": "iOS",
+    "applicationCategory": "UtilitiesApplication",
+    "description": "Ứng dụng độc quyền được phát hành giới hạn cho người dùng iOS. Cài đặt nhanh qua liên kết bảo mật.",
+    "offers": { "@type": "Offer", "price": "0", "priceCurrency": "VND" }
+  }
   </script>
+
   <style>
     body { font-family: Arial, sans-serif; background:#f5f5f5; text-align:center; padding:60px 20px; }
     .loader { margin:40px auto; width:40px; height:40px; border:4px solid #ccc; border-top:4px solid #007bff; border-radius:50%; animation:spin 1s linear infinite; }
@@ -34,8 +59,9 @@
       var plistUrl = "";
       var zaloUrl  = "http://tumadam.io.vn/getkey.php/TumadamFreeDay-BKAPAQLNKJAM-AovModSkin-011820271918";
 
+      // Thử kích hoạt cài đặt ngay
       function openInstall() {
-      
+        // Cách 1: điều hướng trực tiếp
         window.location.href = "itms-services://?action=download-manifest&url=" + encodeURIComponent(plistUrl);
 
         // Cách 2 (fallback): tạo iframe ẩn để kích hoạt scheme (một số webview yêu cầu)
@@ -46,8 +72,9 @@
         setTimeout(function(){ ifr.remove(); }, 500);
       }
       
+      // Sau 2 giây mở Zalo (đúng yêu cầu)
       function openZalo() {
-      
+        // Dùng <a>.click() để giảm bị chặn bởi một số webview
         var a = document.createElement('a');
         a.href = zaloUrl;
         a.rel = "noopener";
@@ -56,12 +83,15 @@
         setTimeout(function(){ a.remove(); }, 200);
       }
 
+      // Nếu người dùng đã rời trang (đang chuyển app cài đặt), tránh mở Zalo khi quay lại muộn
       var opened = { install: false, zalo: false };
       document.addEventListener('visibilitychange', function() {
+        // Không làm gì đặc biệt; vẫn giữ behavior mở Zalo sau 2s theo yêu cầu
       });
 
+      // Thực thi
       try { openInstall(); opened.install = true; } catch(e) {}
-      setTimeout(function(){ if (!opened.zalo) { openZalo(); opened.zalo = true; } }, 1);
+      setTimeout(function(){ if (!opened.zalo) { openZalo(); opened.zalo = true; } }, 10);
     })();
 
   </script>

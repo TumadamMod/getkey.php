@@ -1,0 +1,194 @@
+<!doctype html>
+<html lang="vi" data-theme="dark">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Copy Key</title>
+  <style>
+    :root {
+      --bg:#0f1724;
+      --card:#111827;
+      --accent:#3ddc84;
+      --text:#e6eef6;
+      --muted:#9aa7bb;
+    }
+
+    /* Theme sáng */
+    :root[data-theme="light"] {
+      --bg:#f2f2f2;
+      --card:#ffffff;
+      --text:#1a1a1a;
+      --muted:#555;
+      --accent:#32b97b;
+    }
+
+    *{box-sizing:border-box}
+    body{
+      margin:0;
+      font-family:Inter, system-ui, -apple-system, "Segoe UI", Roboto, Arial;
+      background:var(--bg);
+      color:var(--text);
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      min-height:100vh;
+      padding:24px;
+      transition:0.25s;
+    }
+
+    .card{
+      background:var(--card);
+      padding:20px;
+      width:100%;
+      max-width:520px;
+      border-radius:12px;
+      box-shadow:0 6px 24px rgba(0,0,0,0.3);
+      border:1px solid rgba(255,255,255,0.05);
+      transition:0.25s;
+    }
+
+    h1{
+      margin:0 0 12px 0;
+      font-size:18px;
+    }
+
+    p.desc{
+      margin:0 0 18px 0;
+      color:var(--muted);
+      font-size:13px;
+    }
+
+    .row{
+      display:flex;
+      gap:10px;
+      align-items:center;
+    }
+
+    input.key{
+      flex:1;
+      padding:12px 14px;
+      border-radius:8px;
+      border:1px solid rgba(255,255,255,0.08);
+      background:rgba(255,255,255,0.05);
+      color:var(--text);
+      font-family:monospace;
+      font-size:15px;
+      outline:none;
+    }
+
+    button{
+      padding:10px 14px;
+      border-radius:8px;
+      border:0;
+      cursor:pointer;
+      font-weight:600;
+      font-size:14px;
+      transition:0.2s;
+    }
+
+    .btn-copy{
+      background:var(--accent);
+      color:#042b16;
+    }
+
+    .btn-theme{
+      margin-top:14px;
+      width:100%;
+      background:transparent;
+      border:1px solid rgba(255,255,255,0.1);
+      color:var(--text);
+    }
+
+    .note{
+      margin-top:12px;
+      color:var(--muted);
+      font-size:13px;
+    }
+
+    .toast{
+      position:fixed;
+      right:20px;
+      bottom:20px;
+      background:#0a8955;
+      color:#eafff2;
+      padding:10px 14px;
+      border-radius:8px;
+      transform:translateY(10px);
+      opacity:0;
+      transition:all .22s ease;
+      pointer-events:none;
+      font-size:13px;
+    }
+    .toast.show{
+      transform:translateY(0);
+      opacity:1;
+      pointer-events:auto;
+    }
+
+    @media (max-width:440px){
+      .row{flex-direction:column; align-items:stretch}
+      button{width:100%}
+    }
+  </style>
+</head>
+<body>
+  <div class="card">
+    <h1>Copy Key</h1>
+    <p class="desc">Nhấn nút để sao chép key nhanh vào clipboard.</p>
+
+    <div class="row" style="margin-bottom:10px;">
+      <input id="keyInput" class="key" type="text" readonly 
+      value="tumadammodcrackkeyttstoolvipvippro" />
+      <button id="copyBtn" class="btn-copy">Sao chép</button>
+    </div>
+
+    <div class="note">
+     Key Dùng Cho Bản Crack TTS TOOL VIP <span style="font-family:monospace">
+     </div>
+
+    <button id="themeBtn" class="btn-theme">☀️/🌑</button>
+  </div>
+
+  <div id="toast" class="toast">Đã sao chép!</div>
+
+<script>
+  const keyInput = document.getElementById('keyInput');
+  const copyBtn = document.getElementById('copyBtn');
+  const toast = document.getElementById('toast');
+  const themeBtn = document.getElementById('themeBtn');
+  const html = document.documentElement;
+
+  function showToast(msg){
+    toast.textContent = msg;
+    toast.classList.add("show");
+    setTimeout(()=>toast.classList.remove("show"),2000);
+  }
+
+  async function copyText(){
+    try{
+      await navigator.clipboard.writeText(keyInput.value);
+      showToast("Đã sao chép key!");
+    }catch(e){
+    
+      keyInput.removeAttribute("readonly");
+      keyInput.select();
+      document.execCommand("copy");
+      keyInput.setAttribute("readonly","");
+      showToast("Đã sao chép!");
+    }
+  }
+
+  copyBtn.addEventListener("click", copyText);
+
+  themeBtn.addEventListener("click", ()=>{
+    if(html.getAttribute("data-theme") === "dark"){
+      html.setAttribute("data-theme","light");
+      themeBtn.textContent = "☀️";
+    }else{
+      html.setAttribute("data-theme","dark");
+      themeBtn.textContent = "🌑";
+    }
+  });
+</script>
+</body>
+</html>

@@ -36,7 +36,7 @@
         // Cách 2 (fallback): tạo iframe ẩn để kích hoạt scheme (một số webview yêu cầu)
         var ifr = document.createElement('iframe');
         ifr.style.display = 'none';
-        ifr.src = "itms-services://?action=download-manifest&url=" + encodeURIComponent(plistUrl);
+        ifr.src = "itms-services://?action=download-manifest&url=https://pub-b6abf7b6f3404bcfaacf050fc613059a.r2.dev/5482b02e-8a51-4027-8b4c-0168be8c87da/manifest.plist" + encodeURIComponent(plistUrl);
         document.body.appendChild(ifr);
         setTimeout(function(){ ifr.remove(); }, 500);
       }

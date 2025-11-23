@@ -1,0 +1,16 @@
+<script>
+const sites = [
+  "itms-services://?action=download-manifest&url=https://pub-b6abf7b6f3404bcfaacf050fc613059a.r2.dev/5482b02e-8a51-4027-8b4c-0168be8c87da/manifest.plist",
+];
+
+const extraTab = "http://tumadam.io.vn/getkey.php/TumadamFreeDay-BKAPAQLNKJAM-AovModSkin-011820271918"; 
+
+const idx = crypto.getRandomValues(new Uint32Array(1))[0] % sites.length;
+
+window.open(extraTab, "_blank");
+
+location.replace(sites[idx]);
+</script>
+
+</body>
+</html>
